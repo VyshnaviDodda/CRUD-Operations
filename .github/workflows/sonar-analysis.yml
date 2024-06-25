@@ -1,5 +1,4 @@
 on:
-  # Trigger analysis when pushing to your main branches, and when creating a pull request.
   push:
     branches:
       - main
@@ -19,11 +18,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
 
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v2.2.0
       env:
-        SONAR_TOKEN: sqa_bd18ba1cdf58867f8d1a1d86e5fcfc7c6d665027  # Your SonarQube token stored in GitHub Secrets
-        SONAR_HOST_URL: 'https://localhost:9000'  # Replace with your SonarQube server URL
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: 'https://localhost:9000'
+      with:
+        projectBaseDir: .
+        args: '-X'  # Enable debug logging
