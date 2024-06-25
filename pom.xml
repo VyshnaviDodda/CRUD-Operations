@@ -14,8 +14,11 @@
 	<name>DemoApp</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
-	</properties>
+	    <sonar.host.url>http://localhost:9000</sonar.host.url>
+	    <sonar.login>admin</sonar.login>
+	    <sonar.password>Swapna@123$</sonar.password>
+	    <java.version>17</java.version>
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
