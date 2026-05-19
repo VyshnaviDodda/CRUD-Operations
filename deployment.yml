@@ -2,27 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
  
 metadata:
-  name: springboot-app
+  name: spring-crud-app
  
 spec:
   replicas: 2
  
   selector:
     matchLabels:
-      app: springboot-app
+      app: spring-crud-app
  
   template:
     metadata:
       labels:
-        app: springboot-app
+        app: spring-crud-app
  
     spec:
       containers:
-      - name: springboot-app
+      - name: spring-crud-app
  
-        image: narasimhamadesh/springboot-crud:latest
- 
-        imagePullPolicy: Always
+        image: narasimhamadesh/spring-crud-app:latest
  
         ports:
         - containerPort: 8080
