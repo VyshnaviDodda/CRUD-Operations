@@ -20,7 +20,7 @@ spec:
       containers:
       - name: springboot-app
  
-        image: narasimhamadesh/springboot-crud:1
+        image: narasimhamadesh/springboot-crud:latest
  
         imagePullPolicy: Always
  
