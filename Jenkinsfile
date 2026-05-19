@@ -48,7 +48,7 @@ pipeline {
  
                 sh """
 
-                sed -i "s|image:.*|image: ${IMAGE_NAME}:${BUILD_NUMBER}|g" K8s/deployment.yml
+                sed -i "s|image:.*|image: ${IMAGE_NAME}:${BUILD_NUMBER}|g" deployment.yml
 
                 """
 
