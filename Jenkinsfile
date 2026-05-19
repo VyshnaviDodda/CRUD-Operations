@@ -4,7 +4,7 @@ pipeline {
  
     environment {
  
-        IMAGE_NAME = "narasimhamadesh/springboot-crud"
+        IMAGE_NAME = "narasimhamadesh/spring-crud-app"
  
         KUBECONFIG = "/var/jenkins_home/.kube/config"
 
