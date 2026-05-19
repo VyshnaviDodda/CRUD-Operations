@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy To Kubernetes') {
             steps {
                 sh """
-                sed -i "s|image:.*|image: ${IMAGE_NAME}:${BUILD_NUMBER}|g" K8s/deployment.yml
+                sed -i "s|image:.*|image: ${IMAGE_NAME}:${BUILD_NUMBER}|g" deployment.yml
                 """
                 sh 'kubectl apply -f deployment.yml'
                 sh 'kubectl apply -f service.yml'
