@@ -37,6 +37,7 @@ public class StudentController
 		public ResponseEntity<Student> saveStudent(@RequestBody Student student) 
 	    {
 		    return new ResponseEntity<>(studentRepo.save(student), HttpStatus.CREATED);
+			system.out.println("Created");
 		}
 	    
 	    
